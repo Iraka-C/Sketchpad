@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<!--
+	Written By Iraka
+	Main user interface for Sketch platform
+-->
+<html oncontextmenu="return false"
+		onmouseup="mouseUp(event)"
+		onmousemove="mouseMove(event)">
+	<head>
+		<meta http-equiv="Content-Language" content="zh-cn">
+      <meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+      <link rel="stylesheet" type="text/css" href=".\style.css" />
+      <script src=".\brush.js"></script>
+      <script src=".\canvas.js"></script>
+      <script src=".\colorpicker.js"></script>
+      <script src=".\cursor.js"></script>
+		<script src=".\event.js"></script>
+		<script src=".\help.js"></script>
+		<script src=".\layer.js"></script>
+		<script src=".\math.js"></script>
+		<title>Canvas</title>
+	</head>
+
+	<body onload="init()"
+	      onresize="setPanelSize()"
+			onkeydown="keyDown(event)"
+			onkeyup="keyUp(event)">
+
+		<div class="mask" id="mask" onclick="hideHelp(event)">
+			<div class="bg"></div>
+			<div class="help">
+				<p id="penhelp"></p>
+				<p id="colorhelp"></p>
+				<p id="toolhelp"></p>
+				<p id="canvashelp"></p>
+				<p id="layerhelp"></p>
+				<p id="sizeinfo">Canvas size:<br/>1920*1080</p>
+				<p id="penhelp2"></p>
+				<p id="toolhelp2"></p>
+				<p id="colorhelp2"></p>
+				<p id="layerhelp2"></p>
+			</div>
+		</div>
+
+		<div class="object"><nobr>
+			<div class="brush" onmousewheel="changeBrushParam(event)">
+				<div id="brushtype" class="nobreak bold" onclick="changeBrush(event)">Pen></div>
+				<div id="thickness" class="nobreak">Size:04</div>
+			</div>
+			<div class="colorpicker">
+				<div id="cpick" class="nobreak bold" onclick="clickColorSpace(event)">Color></div>
+				<div id="pick1" class="nobreak" onclick="reverse1(event)" onmousewheel="change1(event)">R:000</div>
+				<div id="pick2" class="nobreak" onclick="reverse2(event)" onmousewheel="change2(event)">G:000</div>
+				<div id="pick3" class="nobreak" onclick="reverse3(event)" onmousewheel="change3(event)">B:000</div>
+			</div>
+			<div class="func">
+				<div id="save" class="nobreak bold" onclick="exportPNG(event)">Export</div>
+				<div class="nobreak" style="font-size:50%">&nbsp;</div>
+				<div id="clear" class="nobreak bold" onclick="clearCanvas(event)">Clear</div>
+				<div id="help" class="nobreak" onclick="showHelp(event)">&nbsp;?&nbsp;</div>
+			</div>
+		</nobr></div>
+
+		<svg id="mouseLayer" xmlns="http://www.w3.org/2000/svg" version="1.1">
+			<circle id="pt" cx="-1000" cy="-1000" r="2" stroke="#000000" stroke-width="0" fill="none" />
+			<g id="pc" stroke="#000000" stroke-width="0">
+				<line id="pc1" x1="-1000" y1="-1000" x2="-1000" y2="-1000" />
+				<line id="pc2" x1="-1000" y1="-1000" x2="-1000" y2="-1000" />
+			</g>
+		</svg>
+
+		<div id="canvaspanel" onmousedown="mouseDownCanvas(event)" onmouseout="hideCursor()">
+		</div>
+
+		<div id="debug" class="info"></div>
+
+
+		<div id="newlayer" onclick="addLayer(event)" onmousewheel="changeBlendMode(event)">
+			<p id="blendmode">
+				Blend Mode<br/>NORMAL
+			</p>
+			<p id="addlayer">+</p>
+		</div>
+		<div id="layerpanel" onmousewheel="setTime()">
+			<div id="layerscroll">
+				<div id="layers">
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
