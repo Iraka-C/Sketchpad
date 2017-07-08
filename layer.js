@@ -83,13 +83,13 @@ function LayerShell(){
 	buttons.className="layerbutton";
 
 	var close=document.createElement("p"); // close a layer
-	close.innerHTML="¡Á";
+	close.innerHTML="&times;";
 	close.style.position="relative";
 	close.style.left="4px";
 	buttons.appendChild(close);
 
 	var vis=document.createElement("p"); // mix a layer with lower layer
-	vis.innerHTML="¡ý";
+	vis.innerHTML="&darr;";
 	vis.style.position="relative";
 	vis.style.left="4px";
 	buttons.appendChild(vis);
