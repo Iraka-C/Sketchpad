@@ -87,9 +87,9 @@ function keyDown(e){
 		for(var i in layerStack)
 			if(i!="remove"){
 				var l=layerStack[i];
-				l.close.innerHTML="¡ø";
+				l.close.innerHTML="&#9650;";
 				l.close.style.color="#000000";
-				l.vis.innerHTML="¨‹";
+				l.vis.innerHTML="&#9660;";
 				l.vis.style.color="#000000";
 			}
 	}
@@ -120,8 +120,8 @@ function keyUp(e){
 		for(var i in layerStack)
 			if(i!="remove"){
 				var l=layerStack[i];
-				l.close.innerHTML="¡Á";
-				l.vis.innerHTML="¡ý";
+				l.close.innerHTML="&times;";
+				l.vis.innerHTML="&darr;";
 				if(i==0)
 					l.vis.style.color="#e0e0e0";
 			}

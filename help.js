@@ -75,8 +75,8 @@ var helpText=[
 	 			of the activated layer.<br/><br/>\
 	 			Scroll on it to change the blend mode.\
 	 			NORMAL, MULTIPLY & SCREEN modes are avaliable.<br/><br/>\
-	 			Click on ¡ø to move this layer upwards.<br/>\
-	 			Click on ¨‹ to move this layer downwards.<br/><br/>\
+	 			Click on &#9650; to move this layer upwards.<br/>\
+	 			Click on &#9660; to move this layer downwards.<br/><br/>\
 	 			If you click on a layer with ALT key pressed,\
 	 			the opacity of pixels in this layer will be protected.\
 	 			Click again with ALT key pressed to unlock the protection."}

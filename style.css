@@ -203,6 +203,11 @@ div.info{
 	top:10px;
 }
 
+.verticalSymbol{
+	writing-mode:vertical-lr;
+    writing-mode:tb-lr; /* IE 9.0 */
+}
+
 #blendmode{
 	position:inherit;
 	font-size:0.8em;
