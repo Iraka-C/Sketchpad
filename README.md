@@ -1,5 +1,6 @@
 # Sketchpad
-HTML5 based sketchpad implementation
+HTML5 based sketchpad implementation<br/>
+<a href="https://iraka-c.github.io/Sketchpad/index.html">Try it out</a>
 
 This is a sketchpad based on HTML5 and can run on every modern browser.<br/>
 Originally, it's a project for a class aiming at Flash. I modified it from ActionScript to JavaScript.
